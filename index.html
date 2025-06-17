@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawer Component</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Drawer Component Demo</h1>
+    <div class="controls" style="display: inline-block; margin-bottom: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 5px;">
+        <h3>Controls</h3>
+        <button class="open-btn">Open Drawer</button>
+        <button class="close-drawer-btn">Close Drawer</button>
+        
+        <h4 style="margin-top: 20px;">Dismissal Mode</h4>
+        <label><input type="radio" name="dismiss-mode" value="0" checked> Full</label>
+        <label><input type="radio" name="dismiss-mode" value="40"> Partial (40px)</label>
+        <label><input type="radio" name="dismiss-mode" value="80"> Partial (80px)</label>
+        
+        <hr style="margin: 20px 0;">
+        
+        <div style="margin-top: 10px;">
+            <label for="default-width">Default Width (px):</label>
+            <input type="number" id="default-width" value="400" min="200" max="800">
+            <button class="set-width-btn">Apply Default Width</button>
+        </div>
+        
+        <div style="margin-top: 10px;">
+            <label for="breakpoint">Breakpoint (px):</label>
+            <input type="number" id="breakpoint" value="768">
+        </div>
+
+        <hr style="margin: 20px 0;">
+
+        <div>
+            <label for="backdrop-toggle">Enable Backdrop</label>
+            <input type="checkbox" id="backdrop-toggle">
+        </div>
+    </div>
+    
+    <div class="backdrop"></div>
+    <div class="drawer open">
+        <div class="resizer"></div>
+        <div class="drawer-header">
+            <h2 class="drawer-title">Drawer Title</h2>
+            <div class="action-buttons">
+                <button class="action-btn">⚙️</button>
+                <button class="action-btn">❓</button>
+                <button class="close-btn">&times;</button>
+            </div>
+            <p class="drawer-subscription">Subscription details here.</p>
+        </div>
+        <div class="drawer-body">
+            <p>This is the drawer content.</p>
+        </div>
+        <div class="drawer-footer">
+            <p>Footer content here.</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html> 
